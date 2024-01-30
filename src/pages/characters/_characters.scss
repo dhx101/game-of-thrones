@@ -1,0 +1,27 @@
+.character{
+        margin-top: 5%;
+        background-color: black;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        justify-content: space-around;
+    &-list{
+            
+            padding: 20px;
+            display: flex;
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        
+        &__items{
+            text-shadow: rgb(188, 188, 188) -2px -2px 6px;
+            color: darkgoldenrod;
+        }
+      
+        &__image{
+            width: 100%;
+            margin-bottom: 20%;
+            box-shadow: white 0px 0px 20px 7px;
+        }
+    }
+}
