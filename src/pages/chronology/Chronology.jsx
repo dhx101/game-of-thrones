@@ -4,35 +4,59 @@ import { ApiContext } from "../../context/Context";
 const Chronology = () => {
 	const { characters } = useContext(ApiContext);
 	const [ordenatedList, setOrdenatedList] = useState(characters);
-    const [ascending, setAscending] = useState(true)
+	const [ascending, setAscending] = useState(true);
 	console.log(ordenatedList);
 	const cambiarOrden = () => {
-		setAscending(!ascending)
+		setAscending(!ascending);
 	};
 
 	const ordenar = () => {
-        cambiarOrden()
+		cambiarOrden();
 		const newArray = [...characters];
 		newArray.sort((a, b) => {
 			const orden = ascending ? 1 : -1;
 			return orden * (a.age - b.age);
 		});
 		setOrdenatedList(newArray);
-        console.log(ascending);
+		console.log(ascending);
 	};
 
 	useEffect(() => {}, []);
 
 	return (
 		<>
-			<button onClick={ordenar}>O</button>
-			{ordenatedList.map((item, index) => (
-				<div key={index}>
-					<p>{item.age}</p>
-					<p>{item.name}</p>
-					<img src={item.image} alt={item.name}></img>
+			<div className="timeline">
+				<div className="timeline-input">
+                    <button onClick={ordenar} className="timeline-input__btn">
+                        O
+                    </button>
+                </div>
+				<div className="timeline-box">
+					{ordenatedList.map((item, index) =>
+						index % 2 === 0 ? (
+							<div key={index} className="timeline-box-character">
+								<p className="timeline-box-character__age">
+									{item.age}
+								</p>
+								<p className="timeline-box-character__name">
+									{item.name}
+								</p>
+								<img src={item.image} alt={item.name}></img>
+							</div>
+						) : (
+							<div key={index} className="timeline-box-character paddingTop">
+								<p className="timeline-box-character__age">
+									{item.age}
+								</p>
+								<p className="timeline-box-character__name">
+									{item.name}
+								</p>
+								<img src={item.image} alt={item.name}></img>
+							</div>
+						)
+					)}
 				</div>
-			))}
+			</div>
 		</>
 	);
 };
