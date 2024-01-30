@@ -9,7 +9,7 @@ import Links from "../../components/nav/Links";
 const Main = () => {
 	return (
 		<>
-			<BrowserRouter>
+        <BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Inicio />} />
 					<Route path="/characters" element={<Characters/>} />

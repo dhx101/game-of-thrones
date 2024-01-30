@@ -1,13 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import Main from './pages/main/Main';
+import "./App.css";
+import { ApiContextProvider } from "./context/Context";
+import Main from "./pages/main/Main";
 
 function App() {
-  return (
-    <>
-      <Main/>
-    </>
-  );
+	return (
+		<><ApiContextProvider>
+			<Main />
+    </ApiContextProvider>
+
+		</>
+	);
 }
 
 export default App;
