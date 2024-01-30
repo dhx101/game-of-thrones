@@ -1,0 +1,21 @@
+.inicio {
+	display: flex;
+	flex-direction: column;
+	min-height: 80vh;
+	background-color: black;
+	background-image: url(https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/series-television/juego-de-tronos-quien-merece-trono-de-hierro/vota/135275835-1-esl-ES/vota.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__title {
+		text-align: center;
+		font-size: 80px;
+		font-family: "GoT";
+        word-spacing: 25px;
+        line-height: 1.6;
+	}
+}

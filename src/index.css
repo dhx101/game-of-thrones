@@ -1,3 +1,7 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.2 | 20191019
+   License: none (public domain)
+*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -9,9 +13,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
-
-main, menu, nav, output, ruby, section, summary,
-
+menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -23,7 +25,6 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-
 footer, header, hgroup, main, menu, nav, section {
   display: block;
 }
@@ -38,7 +39,6 @@ body {
 }
 
 menu, ol, ul {
-
   list-style: none;
 }
 
@@ -55,9 +55,32 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}/*# sourceMappingURL=index.css.map */
-  .timeline {
-  padding: 25px;
+}
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  background-color: black;
+  background-image: url(https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/series-television/juego-de-tronos-quien-merece-trono-de-hierro/vota/135275835-1-esl-ES/vota.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inicio__title {
+  text-align: center;
+  font-size: 80px;
+  font-family: "GoT";
+  word-spacing: 25px;
+  line-height: 1.6;
+}
+
+.timeline {
+  padding: 25px 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,11 +159,6 @@ table {
   border-left: 3px solid white;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/
-   v5.0.2 | 20191019
-   License: none (public domain)
-*/
-=======
 .character {
   margin-top: 5%;
   background-color: black;
@@ -166,8 +184,52 @@ table {
   box-shadow: white 0px 0px 20px 7px;
 }
 
-.navLinks {
-  position: fixed;
-  top: 0px;
-  text-decoration: none;
+.nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  height: 10vh;
+  padding: 0px 10vw;
 }
+.nav__item {
+  color: white;
+  text-decoration: none;
+  font-family: "GoT";
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+}
+.header input {
+  height: 25px;
+}
+.header-lang {
+  color: white;
+}
+
+@font-face {
+  font-family: "GoT";
+  src: url(../public/assets/Game\ of\ Thrones.ttf);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}/*# sourceMappingURL=index.css.map */

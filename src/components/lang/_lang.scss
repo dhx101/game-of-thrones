@@ -1,0 +1,14 @@
+.header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    input {
+        height: 25px;
+    }
+    &-lang {
+        color: white;
+    }
+}
