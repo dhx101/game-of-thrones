@@ -10,19 +10,27 @@ export const ApiContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		const getCharacters = async () => {
-            const charactersApi = await axios.get(`${baseURL}/characters`)
-            setCharacters(charactersApi)
-        };
-        getCharacters()
-	}, []);
-    
-	useEffect(() => {
+		  try {
+			const charactersApi = await axios.get(`${baseURL}/characters`);
+			setCharacters(charactersApi.data); // Extraer los datos de la respuesta
+		  } catch (error) {
+			console.error('Error fetching characters:', error);
+		  }
+		};
+		getCharacters();
+	  }, []);
+	
+	  useEffect(() => {
 		const getHouses = async () => {
-            const housesApi = await axios.get(`${baseURL}/houses`)
-            setHouses(housesApi)
-        };
-        getHouses()
-	}, []);
+		  try {
+			const housesApi = await axios.get(`${baseURL}/houses`);
+			setHouses(housesApi.data); // Extraer los datos de la respuesta
+		  } catch (error) {
+			console.error('Error fetching houses:', error);
+		  }
+		};
+		getHouses();
+	  }, []);
 
 	return (
 		<ApiContext.Provider value={{ characters, houses }}>
