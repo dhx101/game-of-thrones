@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Links = () => {
 	return (
+		<div>
 		<ul>
 			<li>
 				<Link to={"/characters"}>Personajes</Link>
@@ -14,6 +15,7 @@ const Links = () => {
 				<Link to={"/chronology"}>Chronology</Link>
 			</li>
 		</ul>
+		</div>
 	);
 };
 
