@@ -1,5 +1,8 @@
 .timeline {
+  padding: 25px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   background-color: black;
   color: white;
@@ -8,8 +11,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(45deg);
 }
 .timeline-input__btn {
+  color: white;
   display: flex;
   border-radius: 100%;
   width: 35px;
@@ -17,16 +25,21 @@
   justify-items: center;
   justify-content: center;
   align-items: center;
+  border: 3px solid white;
+  background-color: black;
+  cursor: pointer;
 }
 .timeline-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
+  width: 70%;
 }
 .timeline-box-character {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
   gap: 25px;
 }
 .timeline-box-character__name {
@@ -43,8 +56,26 @@
   border-radius: 50%;
 }
 
-.paddingTop {
+.paddingTop-left {
+  padding-top: 50px;
+}
+.paddingTop-right {
   padding-top: 150px;
+}
+
+.border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 10px;
+  width: 100%;
+  border-top: 3px solid white;
+}
+
+.right-border {
+  border-left: 3px solid white;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/

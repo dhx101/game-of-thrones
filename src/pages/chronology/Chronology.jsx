@@ -34,23 +34,27 @@ const Chronology = () => {
 				<div className="timeline-box">
 					{ordenatedList.map((item, index) =>
 						index % 2 === 0 ? (
-							<div key={index} className="timeline-box-character">
-								<p className="timeline-box-character__age">
-									{item.age}
-								</p>
-								<p className="timeline-box-character__name">
-									{item.name}
-								</p>
+							<div key={index} className="timeline-box-character paddingTop-left">
+								<div className="border">
+									<p className="timeline-box-character__age">
+										{item.age}
+									</p>
+									<p className="timeline-box-character__name">
+										{item.name}
+									</p>
+								</div>
 								<img src={item.image} alt={item.name}></img>
 							</div>
 						) : (
-							<div key={index} className="timeline-box-character paddingTop">
-								<p className="timeline-box-character__age">
-									{item.age}
-								</p>
-								<p className="timeline-box-character__name">
-									{item.name}
-								</p>
+							<div key={index} className="timeline-box-character paddingTop-right right-border">
+								<div className="border">
+									<p className="timeline-box-character__age">
+										{item.age}
+									</p>
+									<p className="timeline-box-character__name">
+										{item.name}
+									</p>
+								</div>
 								<img src={item.image} alt={item.name}></img>
 							</div>
 						)
