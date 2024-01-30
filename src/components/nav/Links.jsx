@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 const Links = () => {
 	return (
-		<ul>
+		<ul className="navLinks">
 			<li>
-				<Link to={"/characters"}>Personajes</Link>
+				<Link className="navLink" to={"/characters"}>Personajes</Link>
 			</li>
 			<li>
-				<Link to={"/houses"}>Houses</Link>
+				<Link className="navLink" to={"/houses"}>Houses</Link>
 			</li>
 			<li>
-				<Link to={"/chronology"}>Chronology</Link>
+				<Link className="navLink" to={"/chronology"}>Chronology</Link>
 			</li>
 		</ul>
 	);
