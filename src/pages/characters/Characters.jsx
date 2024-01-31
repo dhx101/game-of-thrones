@@ -10,7 +10,7 @@ const Characters = () => {
       <div className="character">
         {characters.map((Character) => (
           <div className="character-list" key={Character.id}>
-            <h1>{Character.name}</h1>
+            <h1 className="character-list__nombrePersonaje">{Character.name}</h1>
             <Link to={`/characterDetails/${Character.id}`}>
                 <div className="character-list__items">
                 <img className="character-list__items__image" src={Character.image} alt={Character.name} />
