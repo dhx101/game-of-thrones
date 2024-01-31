@@ -212,13 +212,12 @@ table {
   display: flex;
   width: 15%;
 }
+.character-list__nombrePersonaje {
+  color: white;
+}
 .character-list__items__image {
   width: 248px;
   height: 320px;
-}
-
-h1 {
-  color: darkgoldenrod;
 }
 
 .nav {
