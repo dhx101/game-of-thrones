@@ -1,5 +1,46 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v5.0.2 | 20191019
+.fondo {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: space-between;
+  padding: 50px;
+  gap: 30px;
+}
+
+.name {
+  text-align: center;
+  color: white;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.escudos img {
+  width: 100%;
+}
+
+.letras {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.fondo2 {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+
    License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
@@ -37,6 +78,7 @@ footer, header, hgroup, main, menu, nav, section {
 body {
   line-height: 1;
 }
+
 
 menu, ol, ul {
   list-style: none;
@@ -232,4 +274,5 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
 }/*# sourceMappingURL=index.css.map */

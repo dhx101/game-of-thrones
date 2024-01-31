@@ -5,6 +5,7 @@ const Links = () => {
 	const {id} = useParams()
 	console.log(id);
 	return (
+		<div>
 		<ul className="nav">
 			<li>
 				<Link className="nav__item" to={"/characters"}>Personajes</Link>
@@ -16,6 +17,7 @@ const Links = () => {
 				<Link className="nav__item" to={"/chronology"}>Chronology</Link>
 			</li>
 		</ul>
+		</div>
 	);
 };
 
