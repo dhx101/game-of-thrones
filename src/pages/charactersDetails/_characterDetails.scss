@@ -1,0 +1,23 @@
+.backgroundPageBack{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    .__imagenPersonaje{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+    }
+    .__nombrePersonaje{
+            display: flex;
+            flex-direction: row-reverse;
+    }
+}
+
+img {
+    width: 248px;
+    height: 320px;
+}
