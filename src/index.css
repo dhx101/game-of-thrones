@@ -40,6 +40,7 @@ p {
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
+
    License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
@@ -65,15 +66,21 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, main, menu, nav, section {
   display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
 }
 
 body {
   line-height: 1;
 }
 
-ol, ul {
+
+menu, ol, ul {
   list-style: none;
 }
 
@@ -90,4 +97,182 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  background-color: black;
+  background-image: url(https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/series-television/juego-de-tronos-quien-merece-trono-de-hierro/vota/135275835-1-esl-ES/vota.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inicio__title {
+  text-align: center;
+  font-size: 80px;
+  font-family: "GoT";
+  word-spacing: 25px;
+  line-height: 1.6;
+}
+
+.timeline {
+  padding: 25px 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+}
+.timeline-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+.timeline-input__btn {
+  color: white;
+  display: flex;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+  background-color: black;
+  cursor: pointer;
+}
+.timeline-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  width: 70%;
+}
+.timeline-box-character {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 25px;
+}
+.timeline-box-character__name {
+  font-weight: 700;
+}
+.timeline-box-character__age {
+  font-weight: 700;
+}
+.timeline-box-character img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.paddingTop-left {
+  padding-top: 50px;
+}
+.paddingTop-right {
+  padding-top: 150px;
+}
+
+.border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 10px;
+  width: 100%;
+  border-top: 3px solid white;
+}
+
+.right-border {
+  border-left: 3px solid white;
+}
+
+.character {
+  margin-top: 5%;
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: space-around;
+}
+.character-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.character-list__items {
+  text-shadow: rgb(188, 188, 188) -2px -2px 6px;
+  color: darkgoldenrod;
+}
+.character-list__image {
+  width: 100%;
+  margin-bottom: 20%;
+  box-shadow: white 0px 0px 20px 7px;
+}
+
+.nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  height: 10vh;
+  padding: 0px 10vw;
+}
+.nav__item {
+  color: white;
+  text-decoration: none;
+  font-family: "GoT";
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+}
+.header input {
+  height: 25px;
+}
+.header-lang {
+  color: white;
+}
+
+@font-face {
+  font-family: "GoT";
+  src: url(../public/assets/Game\ of\ Thrones.ttf);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
 }/*# sourceMappingURL=index.css.map */
