@@ -254,9 +254,11 @@ table {
 .header-lang {
   display: flex;
   gap: 25px;
+  height: 60%;
 }
 .header-lang-flag {
-  height: 50px;
+  height: 100%;
+  width: 100%;
 }
 
 .backgroundPageBack {

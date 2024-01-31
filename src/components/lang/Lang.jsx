@@ -15,7 +15,11 @@ const Lang = () => {
 						src={`./assets/img/${lng}.png`}
 						alt={lng}
 						key={lng}
-            className={i18n.resolvedLanguage === lng ? "selected header-lang-flag" : "header-lang-flag"}
+						className={
+							i18n.resolvedLanguage === lng
+								? "selected header-lang-flag"
+								: "header-lang-flag"
+						}
 						onClick={() => i18n.changeLanguage(lng)}
 					/>
 				))}
