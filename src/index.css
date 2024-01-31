@@ -247,12 +247,17 @@ h1 {
   align-items: center;
   justify-content: space-between;
   background-color: black;
+  padding: 0 10vh;
 }
 .header input {
   height: 25px;
 }
 .header-lang {
-  color: white;
+  display: flex;
+  gap: 25px;
+}
+.header-lang-flag {
+  height: 50px;
 }
 
 .backgroundPageBack {

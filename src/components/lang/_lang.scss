@@ -1,14 +1,20 @@
 .header {
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    background-color: black;
-    input {
-        height: 25px;
-    }
-    &-lang {
-        color: white;
-    }
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
+	background-color: black;
+    padding: 0 10vh;
+	input {
+		height: 25px;
+	}
+	&-lang {
+        display: flex;
+        gap: 25px;
+
+		&-flag {
+			height: 50px;
+		}
+	}
 }
