@@ -38,9 +38,8 @@ p {
   color: white;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.2 | 20191019
    License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
@@ -78,7 +77,6 @@ footer, header, hgroup, main, menu, nav, section {
 body {
   line-height: 1;
 }
-
 
 menu, ol, ul {
   list-style: none;
@@ -252,12 +250,17 @@ table {
   align-items: center;
   justify-content: space-between;
   background-color: black;
+  padding: 0 10vh;
 }
 .header input {
   height: 25px;
 }
 .header-lang {
-  color: white;
+  display: flex;
+  gap: 25px;
+}
+.header-lang-flag {
+  height: 50px;
 }
 
 @font-face {
@@ -274,5 +277,4 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
 }/*# sourceMappingURL=index.css.map */
