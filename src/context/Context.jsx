@@ -32,6 +32,8 @@ export const ApiContextProvider = ({ children }) => {
 		getHouses();
 	  }, []);
 
+
+
 	return (
 		<ApiContext.Provider value={{ characters, houses }}>
 			{children}
