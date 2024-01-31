@@ -38,9 +38,8 @@ p {
   color: white;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.2 | 20191019
    License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
@@ -78,7 +77,6 @@ footer, header, hgroup, main, menu, nav, section {
 body {
   line-height: 1;
 }
-
 
 menu, ol, ul {
   list-style: none;
@@ -202,28 +200,25 @@ table {
 }
 
 .character {
-  margin-top: 5%;
-  background-color: black;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  justify-content: space-around;
-}
-.character-list {
-  padding: 20px;
   display: flex;
-  flex-direction: column-reverse;
+  background-color: black;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
-.character-list__items {
-  text-shadow: rgb(188, 188, 188) -2px -2px 6px;
-  color: darkgoldenrod;
+.character-list {
+  margin: 3vh 0px 3vh 0px;
+  display: flex;
+  width: 15%;
 }
-.character-list__image {
-  width: 100%;
-  margin-bottom: 20%;
-  box-shadow: white 0px 0px 20px 7px;
+.character-list__items__image {
+  width: 248px;
+  height: 320px;
+}
+
+h1 {
+  color: darkgoldenrod;
 }
 
 .nav {
@@ -260,6 +255,30 @@ table {
   color: white;
 }
 
+.backgroundPageBack {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.backgroundPageBack .__imagenPersonaje {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.backgroundPageBack .__nombrePersonaje {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+img {
+  width: 248px;
+  height: 320px;
+}
+
 @font-face {
   font-family: "GoT";
   src: url(../public/assets/Game\ of\ Thrones.ttf);
@@ -274,5 +293,4 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
 }/*# sourceMappingURL=index.css.map */
