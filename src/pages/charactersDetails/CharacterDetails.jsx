@@ -8,7 +8,6 @@ const baseURL = "http://localhost:3000";
 
 
 function CharacterDetails() {
-    const {character} = useContext(ApiContext)
     const {id} = useParams()
     const [characters, setCharacters] = useState([]);
     useEffect(() => {
@@ -21,7 +20,7 @@ function CharacterDetails() {
 		  }
 		};
 		getCharacters();
-	  }, []);
+	  }, [id]);
 
     return (
       <div >
