@@ -11,7 +11,7 @@
   text-align: center;
   color: white;
   font-size: larger;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "GoT";
 }
 
 .escudos img {
@@ -24,10 +24,6 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-}
-
-.fondo1 {
-  background-color: black;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -200,14 +196,42 @@ table {
   align-items: center;
 }
 .character-list {
-  margin: 3vh 0px 3vh 0px;
+  margin: 20px 1px 20px 1px;
+  height: 320px;
+  width: 248px;
+  position: relative;
   display: flex;
-  width: 15%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
-.character-list__nombrePersonaje {
+.character-list-a {
+  text-decoration: none;
+}
+.character-list-a__items {
+  margin-top: -30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.character-list-a__items:hover .character-list-a__items__nombrePersonaje {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.character-list-a__items__nombrePersonaje {
+  font-family: "GoT";
+  text-align: center;
   color: white;
+  text-decoration: none;
+  opacity: 0;
+  width: 100%;
+  padding: 15px 0;
 }
-.character-list__items__image {
+.character-list-a__items__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: -45px;
   width: 248px;
   height: 320px;
 }
@@ -259,27 +283,50 @@ table {
 }
 
 .backgroundPageBack {
+  display: flex;
   background-color: black;
-  display: flex;
+  height: 80vh;
   flex-wrap: wrap;
   flex-direction: column;
-  align-content: center;
-  align-items: center;
 }
-.backgroundPageBack .__imagenPersonaje {
+.backgroundPageBack-imagenPersonaje {
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
-.backgroundPageBack .__nombrePersonaje {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-img {
+.backgroundPageBack-imagenPersonaje__image {
   width: 248px;
   height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.backgroundPageBack__nombre {
+  font-size: 36px;
+  font-family: "GoT";
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+.backgroundPageBack-divDeReferencias {
+  margin-top: 30px;
+  display: flex;
+}
+.backgroundPageBack-divDeReferencias__titulosReferencias {
+  font-family: "GoT";
+  color: white;
+}
+.backgroundPageBack-divDeReferencias-referencias__descripcionReferencias {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  justify-content: center;
 }
 
 @font-face {

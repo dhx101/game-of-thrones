@@ -9,11 +9,11 @@ const Characters = ({characters}) => {
     <>
       <div className="character">
         {characters.map((Character) => (
-          <div className="character-list" key={Character.id}>
-            <h1 className="character-list__nombrePersonaje">{Character.name}</h1>
-            <Link to={`/characterDetails/${Character.id}`}>
-                <div className="character-list__items">
-                <img className="character-list__items__image" src={Character.image} alt={Character.name} />
+          <div className="character-list" key={Character.id}> 
+            <Link className="character-list-a" to={`/characterDetails/${Character.id}`}>
+                <div className="character-list-a__items">
+                <img className="character-list-a__items__image" src={Character.image} alt={Character.name} />
+                <h1 className="character-list-a__items__nombrePersonaje">{Character.name}</h1>
                 </div>
             </Link>
           </div>
