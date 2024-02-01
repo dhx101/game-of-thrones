@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ApiContext } from "../../context/Context";
 import { Link } from "react-router-dom";
-
+import "./_Houses.scss"
 
 const Houses = () => {
   const { houses } = useContext(ApiContext);
@@ -11,12 +11,13 @@ const Houses = () => {
   return (
     <div className="fondo">
       {houses.map((house) => (
-        <div  className="letras"key={house.id}>
-          <h1 className="name"> {house.name}</h1>
+        <div key={house.id}>
+          <div className="fondo__nombre">
+          <h1> {house.name}</h1>
+          </div>
           <Link to={`/DetailHouses/${house.id}`}>
-          <div className="escudos">    
+          <div className="fondo__escudos">    
           <img  src={house.image} alt={house.name} />
-          
           </div>
           </Link>
         </div>
