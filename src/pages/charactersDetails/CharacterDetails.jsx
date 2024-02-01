@@ -2,11 +2,12 @@ import { useContext, useEffect, useState } from 'react';
 import { ApiContext } from '../../context/Context'
 import { useParams } from 'react-router'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import Lang from '../../components/lang/Lang';
 const baseURL = "http://localhost:3000";
 
 
 function CharacterDetails() {
-    const {character} = useContext(ApiContext)
     const {id} = useParams()
     const [characters, setCharacters] = useState([]);
     useEffect(() => {
@@ -19,11 +20,14 @@ function CharacterDetails() {
 		  }
 		};
 		getCharacters();
-	  }, []);
+	  }, [id]);
 
     return (
       <div >
-        
+        <header className="header">
+				<Link to={"/houses"}> Atras </Link>
+				<Lang />
+			</header>
         <div  className="backgroundPageBack">
           <div className='backgroundPageBack__imagenPersonaje'>    
           <img  src={characters.image} alt={characters.name} />

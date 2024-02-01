@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ApiContext } from "../../context/Context";
+import { Link } from "react-router-dom";
+import Lang from "../../components/lang/Lang";
 
 const Chronology = () => {
 	const { characters } = useContext(ApiContext);
@@ -25,6 +27,10 @@ const Chronology = () => {
 
 	return (
 		<>
+		<header className="header">
+				<Link to={"/"}> Atras </Link>
+				<Lang />
+			</header>
 			<div className="timeline">
 				<div className="timeline-input">
                     <button onClick={ordenar} className="timeline-input__btn">

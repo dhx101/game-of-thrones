@@ -1,20 +1,22 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import Lang from "../../components/lang/Lang";
 
-const lngs ={
-  en: { nativeName: "English" },
-	es: { nativeName: "Español" },
-}
 
 const Inicio = () => {
+	const { t } = useTranslation();
 
-	const { t, i18n } = useTranslation();
+	return (
+		<>
+			<header className="header">
+      <span></span>
+				<Lang />
+			</header>
+			<div className="inicio">
+				<h1 className="inicio__title">{t("title")}</h1>
+			</div>
+		</>
+	);
+};
 
-  return (
-    <div className='inicio'>
-      <h1 className='inicio__title'>{t("title")}</h1>
-    </div>
-  )
-}
-
-export default Inicio
+export default Inicio;
