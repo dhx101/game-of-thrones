@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import { ApiContext } from "../../context/Context";
+// import React, { useContext } from "react";
+// import { ApiContext } from "../../context/Context";
 import { Link } from "react-router-dom";
 
-const Characters = () => {
-  const { characters } = useContext(ApiContext);
+const Characters = ({characters}) => {
+  // const { characters } = useContext(ApiContext);
 
   return (
     <>

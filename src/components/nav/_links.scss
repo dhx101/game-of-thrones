@@ -1,3 +1,18 @@
-.fondi{
-    background-color: beige;
+.nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    height: 10vh;
+    padding: 0px 10vw;
+    &__item {
+        color: white;
+        text-decoration: none;
+        font-family: "GoT";
+        font-weight: 400;
+        font-size: 25px;
+    }
 }

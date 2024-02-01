@@ -5,13 +5,20 @@
 	align-items: center;
 	justify-content: space-between;
 	background-color: black;
-    padding: 0 10vh;
-	input {
-		height: 25px;
+	padding: 0 10vh;
+	&-searchbar {
+		label {
+			font-family: "GoT";
+			font-size: 1rem;
+			color: white;
+		}
+		input {
+			height: 25px;
+		}
 	}
 	&-lang {
-        display: flex;
-        gap: 25px;
+		display: flex;
+		gap: 25px;
 		height: 60%;
 		&-flag {
 			height: 100%;

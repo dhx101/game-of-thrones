@@ -16,7 +16,8 @@ i18n.use(LanguageDetector)
                     personajes:"Characters",
                     casas:"Houses",
                     cronologia:"Chronology",
-                    title:"Game of Thrones"
+                    title:"Game of Thrones",
+                    nombre:"Name:"
                 },
 			},
             es: {
@@ -24,7 +25,8 @@ i18n.use(LanguageDetector)
                     personajes:"Personajes",
                     casas:"Casas",
                     cronologia:"Cronología",
-                    title:"Juego de Tronos"
+                    title:"Juego de Tronos",
+                    nombre:"Nombre:"
                 }
             }
 		},
