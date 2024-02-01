@@ -1,35 +1,42 @@
-import React, { useContext } from 'react'
-import { ApiContext } from '../../context/Context'
-import { useParams } from 'react-router'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import axios from "axios";
+const baseURL = "http://localhost:3000";
 
 function DetailHouses() {
-  const { houses} = useContext(ApiContext)
-  const {id} = useParams()
-  // console.log(houses[id])
-  const newId = id-1;
-  console.log(houses[newId])
+  const { id } = useParams();
+  const [detailHouses, setDetailouses] = useState([]);
+
+  useEffect(() => {
+    const getdetailHouses = async () => {
+      try {
+        const detailHousesApi = await axios.get(`${baseURL}/houses/${id}`);
+        setDetailouses(detailHousesApi.data); // Extraer los datos de la respuesta
+      } catch (error) {
+        console.error("Error fetching houses:", error);
+      }
+    };
+    getdetailHouses();
+  }, [id]);
+
   return (
-    <div >
-      
-      <div  className="fondo2"key={houses.id}>
-        <h1> {houses[newId].name}</h1>
+    <div className="fondo1">
+      <div className="fondo1__fondo2" key={detailHouses.id}>
+        <h1 className="fondo1__fondo2__nombre1"> {detailHouses.name}</h1>
         <h1>SEDE</h1>
-        <p>{houses[newId].settlement}</p>
+        <p>{detailHouses.settlement}</p>
         <h1>REGION</h1>
-        <p>{houses[newId].region}</p>
+        <p>{detailHouses.region}</p>
         <h1>ALIANZAS</h1>
-        <p>{houses[newId].alliances}</p>
+        <p>{detailHouses.alliances}</p>
         <h1>RELIGICIONES</h1>
-        <p>{houses[newId].religions}</p>
+        <p>{detailHouses.religions}</p>
         <h1>FUNDACION</h1>
-        <p>{houses[newId].foundation}</p>
-        <div >    
-        <img  src={houses[newId].image} alt={houses[newId].name} />
-        </div>
+        <p>{detailHouses.foundation}</p>
+        <img  className="img1"src={detailHouses.image} alt={detailHouses.name} />
       </div>
-    
-  </div>
-  )
+    </div>
+  );
 }
 
-export default DetailHouses
+export default DetailHouses;
