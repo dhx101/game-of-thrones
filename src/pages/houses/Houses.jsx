@@ -52,6 +52,7 @@ const Houses = () => {
 			</div>
 		</>
 	);
+
 };
 
 export default Houses;

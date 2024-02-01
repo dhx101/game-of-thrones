@@ -6,15 +6,15 @@
   padding: 50px;
   gap: 30px;
 }
-
-.name {
-  text-align: center;
+.fondo__nombre {
   color: white;
-  font-size: larger;
-  font-family: "GoT";
-}
 
-.escudos img {
+  font-family: "GoT";
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+.fondo__escudos {
   width: 100%;
 }
 
@@ -208,23 +208,8 @@ table {
   height: 320px;
 }
 
-.nav {
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  font-size: 40px;
-  font-weight: 700;
-  height: 10vh;
-  padding: 0px 10vw;
-}
-.nav__item {
-  color: white;
-  text-decoration: none;
-  font-family: "GoT";
-  font-weight: 400;
-  font-size: 25px;
+.fondi {
+  background-color: beige;
 }
 
 .header {
@@ -317,6 +302,9 @@ img {
   margin: 30px 0px 47px;
   width: 100%;
   height: 36px;
+
+  color: white;
+
 }
 
 .fondo1__titles1 {
@@ -325,6 +313,8 @@ img {
   flex-direction: row;
   justify-content: space-evenly;
   margin: 20px 20px 0px 20px;
+  color: white;
+
 }
 
 h1.fondo1__titulos {
@@ -353,6 +343,25 @@ h1.fondo2name {
   flex-direction: column;
   gap: 10px;
 }
+
+.fondo {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: space-between;
+  padding: 50px;
+  gap: 30px;
+}
+.fondo__nombre {
+  color: white;
+  font-family: "GoT";
+  text-align: center;
+  margin-bottom: 20px;
+}
+.fondo__escudos {
+  width: 100%;
+}
+
 
 @font-face {
   font-family: "GoT";

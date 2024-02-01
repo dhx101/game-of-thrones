@@ -4,6 +4,7 @@ import axios from "axios";
 import Lang from "../../components/lang/Lang";
 import { Link } from "react-router-dom";
 
+
 const baseURL = "http://localhost:3000";
 
 function DetailHouses() {
