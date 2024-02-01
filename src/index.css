@@ -26,21 +26,12 @@
   gap: 10px;
 }
 
-.fondo2 {
+.fondo1 {
   background-color: black;
 }
 
-h1 {
-  color: white;
-}
-
-p {
-  color: white;
-}
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.2 | 20191019
    License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
@@ -78,7 +69,6 @@ footer, header, hgroup, main, menu, nav, section {
 body {
   line-height: 1;
 }
-
 
 menu, ol, ul {
   list-style: none;
@@ -202,28 +192,24 @@ table {
 }
 
 .character {
-  margin-top: 5%;
-  background-color: black;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  justify-content: space-around;
-}
-.character-list {
-  padding: 20px;
   display: flex;
-  flex-direction: column-reverse;
+  background-color: black;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
-.character-list__items {
-  text-shadow: rgb(188, 188, 188) -2px -2px 6px;
-  color: darkgoldenrod;
+.character-list {
+  margin: 3vh 0px 3vh 0px;
+  display: flex;
+  width: 15%;
 }
-.character-list__image {
-  width: 100%;
-  margin-bottom: 20%;
-  box-shadow: white 0px 0px 20px 7px;
+.character-list__nombrePersonaje {
+  color: white;
+}
+.character-list__items__image {
+  width: 248px;
+  height: 320px;
 }
 
 .nav {
@@ -252,12 +238,48 @@ table {
   align-items: center;
   justify-content: space-between;
   background-color: black;
+  padding: 0 10vh;
 }
-.header input {
+.header-searchbar label {
+  font-family: "GoT";
+  font-size: 1rem;
+  color: white;
+}
+.header-searchbar input {
   height: 25px;
 }
 .header-lang {
-  color: white;
+  display: flex;
+  gap: 25px;
+  height: 60%;
+}
+.header-lang-flag {
+  height: 100%;
+  width: 100%;
+}
+
+.backgroundPageBack {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.backgroundPageBack .__imagenPersonaje {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.backgroundPageBack .__nombrePersonaje {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+img {
+  width: 248px;
+  height: 320px;
 }
 
 @font-face {
@@ -274,5 +296,4 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
 }/*# sourceMappingURL=index.css.map */

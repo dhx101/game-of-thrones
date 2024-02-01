@@ -1,14 +1,28 @@
 .header {
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    background-color: black;
-    input {
-        height: 25px;
-    }
-    &-lang {
-        color: white;
-    }
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
+	background-color: black;
+	padding: 0 10vh;
+	&-searchbar {
+		label {
+			font-family: "GoT";
+			font-size: 1rem;
+			color: white;
+		}
+		input {
+			height: 25px;
+		}
+	}
+	&-lang {
+		display: flex;
+		gap: 25px;
+		height: 60%;
+		&-flag {
+			height: 100%;
+			width: 100%;
+		}
+	}
 }
