@@ -26,16 +26,8 @@
   gap: 10px;
 }
 
-.fondo2 {
+.fondo1 {
   background-color: black;
-}
-
-h1 {
-  color: white;
-}
-
-p {
-  color: white;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -248,7 +240,12 @@ table {
   background-color: black;
   padding: 0 10vh;
 }
-.header input {
+.header-searchbar label {
+  font-family: "GoT";
+  font-size: 1rem;
+  color: white;
+}
+.header-searchbar input {
   height: 25px;
 }
 .header-lang {
