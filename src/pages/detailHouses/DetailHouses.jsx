@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
+import "./DetailHouses.scss";
+
 const baseURL = "http://localhost:3000";
 
 function DetailHouses() {
@@ -21,19 +23,38 @@ function DetailHouses() {
 
   return (
     <div className="fondo1">
-      <div className="fondo1__fondo2" key={detailHouses.id}>
-        <h1 className="fondo1__fondo2__nombre1"> {detailHouses.name}</h1>
-        <h1>SEDE</h1>
-        <p>{detailHouses.settlement}</p>
-        <h1>REGION</h1>
-        <p>{detailHouses.region}</p>
-        <h1>ALIANZAS</h1>
-        <p>{detailHouses.alliances}</p>
-        <h1>RELIGICIONES</h1>
-        <p>{detailHouses.religions}</p>
-        <h1>FUNDACION</h1>
-        <p>{detailHouses.foundation}</p>
-        <img  className="img1"src={detailHouses.image} alt={detailHouses.name} />
+      <div className="setImage">
+        <img className="fondo1img1" src={detailHouses.image} alt="bandera" />
+      </div>
+
+      <div className="fondo1name">
+        <h1 className="fondo2name">House {detailHouses.name}</h1>
+      </div>
+      <div className="fondo1__titles1">
+        <div className="fondo1__pro1">
+          <h1 className="fondo1__titulos">SEDE</h1>
+          <p className="fondo1__propiedades">{detailHouses.settlement}</p>
+        </div>
+        <div className="fondo1pro1">
+          <h1 className="fondo1__titulos">REGION</h1>
+          <p className="fondo1__propiedades">{detailHouses.region}</p>
+        </div>
+        <div className="fondo1pro1">
+          <h1 className="fondo1__titulos">ALIANZAS</h1>
+          <div className="p1">
+          {detailHouses?.alliances?.map((house, index) => (
+            <p key={index}>{house}</p>
+          ))}
+          </div>
+        </div>
+        <div className="fondo1pro1">
+          <h1 className="fondo1__titulos">RELIGICIONES</h1>
+          <p className="fondo1__propiedades">{detailHouses.religions}</p>
+        </div>
+        <div className="fondo1__pro1">
+          <h1 className="fondo1__titulos">FUNDACION</h1>
+          <p className="fondo1__propiedades">{detailHouses.foundation}</p>
+        </div>
       </div>
     </div>
   );
