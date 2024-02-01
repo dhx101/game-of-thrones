@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { ApiContext } from "../../context/Context";
 import { Link } from "react-router-dom";
-import "./_Houses.scss"
 
 const Houses = () => {
   const { houses } = useContext(ApiContext);
