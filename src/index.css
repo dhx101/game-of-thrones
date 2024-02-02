@@ -5,7 +5,6 @@
   justify-content: space-between;
   padding: 50px;
   gap: 30px;
-  height: 80vh;
 }
 .fondo__name {
   color: white;
@@ -364,7 +363,6 @@ h1.fondo2name {
   justify-content: space-between;
   padding: 50px;
   gap: 30px;
-  height: 80vh;
 }
 .fondo__name {
   color: white;
