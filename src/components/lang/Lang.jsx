@@ -15,7 +15,7 @@ const Lang = () => {
 			</Link>
 			{Object.keys(lngs).map((lng) => (
 				<img
-					src={`./assets/img/${lng}.png`}
+					src={`./assets/img/${lng}.svg`}
 					alt={lng}
 					key={lng}
 					className={

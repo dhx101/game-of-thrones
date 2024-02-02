@@ -372,6 +372,9 @@ table {
   margin: 20px 20px 0px 20px;
   color: white;
 }
+.fondo1__titles1 p {
+  font-family: "GoT";
+}
 
 h1.fondo1__titulos {
   font-family: "GoT";
