@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import SearchBar from "../../components/searchbar/SearchBar";
 import Lang from "../../components/lang/Lang";
 import axios from "axios";
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
 
 const Houses = () => {
 	const baseURL = "http://localhost:3000";
@@ -38,6 +40,7 @@ const Houses = () => {
 				<SearchBar urlJson={urlJson} />
 				<Lang />
 			</header>
+			<SimpleBar forceVisible="y" style={{ height: "80vh" }}>
 			<div className="fondo">
 				{houses.map((house, index) => (
 					<div className="fondo-letras" key={index}>
@@ -50,6 +53,7 @@ const Houses = () => {
 					</div>
 				))}
 			</div>
+			</SimpleBar>
 		</>
 	);
 

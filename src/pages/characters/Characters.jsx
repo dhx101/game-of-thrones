@@ -5,7 +5,8 @@ import SearchBar from "../../components/searchbar/SearchBar";
 import Lang from "../../components/lang/Lang";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
 
 
 const Characters = () => {
@@ -41,6 +42,7 @@ const Characters = () => {
         <SearchBar urlJson={urlJson} />
         <Lang />
       </header>
+      <SimpleBar forceVisible="y" style={{ height: "80vh" }}>
       <div className="character">
         {characters.map((Character) => (
           <div className="character-list" key={Character.id}> 
@@ -53,6 +55,8 @@ const Characters = () => {
           </div>
         ))}
       </div>
+      </SimpleBar>
+      
     </>
   );
 };
