@@ -56,7 +56,9 @@ const Chronology = () => {
 											{item.name}
 										</p>
 									</div>
-									<img src={item.image} alt={item.name}></img>
+									<Link to={`/characterDetails/${item.id}`}>
+										<img src={item.image} alt={item.name}></img>
+									</Link>
 								</div>
 							) : (
 								<div
@@ -70,7 +72,9 @@ const Chronology = () => {
 											{item.name}
 										</p>
 									</div>
-									<img src={item.image} alt={item.name}></img>
+									<Link to={`/characterDetails/${item.id}`}>
+										<img src={item.image} alt={item.name}></img>
+									</Link>
 								</div>
 							)
 						)}
