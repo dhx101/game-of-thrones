@@ -1,27 +1,29 @@
-import { useContext, useEffect, useState } from "react";
-import { ApiContext } from "../../context/Context";
-import { useParams } from "react-router";
-import axios from "axios";
-import simpleBar from "simplebar-react";
+import { useContext, useEffect, useState } from 'react';
+import { ApiContext } from '../../context/Context'
+import { useParams } from 'react-router'
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import Lang from '../../components/lang/Lang';
+
+
 const baseURL = "http://localhost:3000";
 
 function CharacterDetails() {
-  const { character } = useContext(ApiContext);
-  const { id } = useParams();
-  const [characters, setCharacters] = useState([]);
-  useEffect(() => {
-    const getCharacters = async () => {
-      try {
-        const charactersApi = await axios.get(`${baseURL}/characters/${id}`);
-        setCharacters(charactersApi.data);
-      } catch (error) {
-        console.error("Error fetching characters:", error);
-      }
-    };
-    getCharacters();
-  }, []);
+    const {id} = useParams()
+    const [characters, setCharacters] = useState([]);
+    useEffect(() => {
+		const getCharacters = async () => {
+		  try {
+			const charactersApi = await axios.get(`${baseURL}/characters/${id}`);
+			setCharacters(charactersApi.data);
+		  } catch (error) {
+			console.error('Error fetching characters:', error);
+		  }
+		};
+		getCharacters();
+	  }, [id]);
 
-  return (
+     return (
     <div className="backgroundPageBack">
       <div className="backgroundPageBack-imagenPersonaje">
         <img
@@ -72,7 +74,6 @@ function CharacterDetails() {
             {characters.alliances}
           </p>
         </div>
-
         <h1 className="backgroundPageBack-divDeReferencias__titulosReferencias">
           Episodios
         </h1>

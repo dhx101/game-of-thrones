@@ -6,15 +6,16 @@
   padding: 50px;
   gap: 30px;
 }
-
-.name {
-  text-align: center;
+.fondo__nombre {
   color: white;
-  font-size: larger;
   font-family: "GoT";
-}
+  text-align: center;
+  font-size: larger;
+  margin-bottom: 20px;
 
-.escudos img {
+
+}
+.fondo__escudos {
   width: 100%;
 }
 
@@ -236,23 +237,8 @@ table {
   height: 320px;
 }
 
-.nav {
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  font-size: 40px;
-  font-weight: 700;
-  height: 10vh;
-  padding: 0px 10vw;
-}
-.nav__item {
-  color: white;
-  text-decoration: none;
-  font-family: "GoT";
-  font-weight: 400;
-  font-size: 25px;
+.fondi {
+  background-color: beige;
 }
 
 .header {
@@ -264,6 +250,11 @@ table {
   background-color: black;
   padding: 0 10vh;
 }
+.header-searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .header-searchbar label {
   font-family: "GoT";
   font-size: 1rem;
@@ -274,12 +265,21 @@ table {
 }
 .header-lang {
   display: flex;
+  justify-content: space-evenly;
   gap: 25px;
   height: 60%;
 }
 .header-lang-flag {
   height: 100%;
   width: 100%;
+}
+.header-lang-home img {
+  height: 100%;
+}
+
+.selected {
+  border-radius: 5px;
+  border: 1px solid white;
 }
 
 .backgroundPageBack {
@@ -328,6 +328,92 @@ table {
   flex-direction: column-reverse;
   justify-content: center;
 }
+
+.fondo1 {
+  height: 80vh;
+  display: flex;
+  background-color: black;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.setImage {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fondo1name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "GoT";
+  margin-top: 20px;
+  margin: 30px 0px 47px;
+  width: 100%;
+  height: 36px;
+
+  color: white;
+
+}
+
+.fondo1__titles1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px 20px 0px 20px;
+  color: white;
+
+}
+
+h1.fondo1__titulos {
+  font-family: "GoT";
+  margin-bottom: 30px;
+}
+
+.fondo1__pro1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+img.fondo1img1 {
+  width: 248px;
+  height: 320px;
+}
+
+h1.fondo2name {
+  font-size: 36px;
+}
+
+.p1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fondo {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: space-between;
+  padding: 50px;
+  gap: 30px;
+}
+.fondo__nombre {
+  color: white;
+  font-family: "GoT";
+  text-align: center;
+  margin-bottom: 20px;
+}
+.fondo__escudos {
+  width: 100%;
+}
+
 
 @font-face {
   font-family: "GoT";

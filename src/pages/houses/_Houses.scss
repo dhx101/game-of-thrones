@@ -6,29 +6,19 @@
     padding: 50px;
     gap: 30px;
     
-}
-   
-.name{
-   
-        text-align: center;
+    &__nombre{
         color: white;
-        font-size: larger;
         font-family: 'GoT';
-    
-    
-    
-}
-.escudos{
-    img{
-        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
     }
+
+    &__escudos{
+        width: 100%;
+        
+    }
+
     
-     
 }
-.letras{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;   
-}
+    
+    
