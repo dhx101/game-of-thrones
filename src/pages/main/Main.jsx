@@ -6,11 +6,9 @@ import Houses from "../houses/Houses";
 import Chronology from "../chronology/Chronology";
 import Links from "../../components/nav/Links";
 import DetailHouses from "../detailHouses/DetailHouses";
-import Lang from "../../components/lang/Lang";
 import CharactersDetails from "../charactersDetails/CharacterDetails";
 import axios from "axios";
-import SimpleBar from "simplebar-react";
-import "simplebar-react/dist/simplebar.min.css";
+
 const Main = () => {
 	const baseURL = "http://localhost:3000";
 	const [characters, setCharacters] = useState([]);
