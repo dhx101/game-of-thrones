@@ -35,17 +35,9 @@ const Main = () => {
 		getCharacters();
 	}, []);
 
-	const urlJson = (name) => {
-		getCharacters(name);
-	};
-
 	return (
 		<>
 			<BrowserRouter>
-				<div>
-					<Lang urlJson={urlJson} />
-				</div>
-				<SimpleBar forceVisible="y" style={{ height: "80vh" }}>
 					<Routes>
 						<Route path="/" element={<Inicio />} />
 						<Route
@@ -60,7 +52,6 @@ const Main = () => {
 						<Route path="/chronology" element={<Chronology />} />
 						<Route path="/DetailHouses/:id" element={<DetailHouses />} />
 					</Routes>
-				</SimpleBar>
 				<Links />
 			</BrowserRouter>
 		</>
