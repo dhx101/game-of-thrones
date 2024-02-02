@@ -6,7 +6,7 @@
     padding: 50px;
     gap: 30px;
     
-    &__nombre{
+    &__name{
         color: white;
         font-family: 'GoT';
         text-align: center;
@@ -14,8 +14,10 @@
     }
 
     &__escudos{
-        width: 100%;
-        
+        width: 200px;
+        img {
+            width: 100%;
+        }
     }
 
     

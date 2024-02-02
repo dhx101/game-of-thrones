@@ -40,10 +40,10 @@ const Houses = () => {
 			</header>
 			<div className="fondo">
 				{houses.map((house, index) => (
-					<div className="letras" key={index}>
-						<h1 className="name"> {house.name}</h1>
+					<div className="fondo-letras" key={index}>
+						<h1 className="fondo__name"> {house.name}</h1>
 						<Link to={`/DetailHouses/${house.id}`}>
-							<div className="escudos">
+							<div className="fondo__escudos">
 								<img src={house.image} alt={house.name} />
 							</div>
 						</Link>

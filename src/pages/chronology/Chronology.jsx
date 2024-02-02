@@ -27,20 +27,24 @@ const Chronology = () => {
 
 	return (
 		<>
-		<header className="header">
-				<Link to={"/"}> Atras </Link>
+			<header className="header">
+				<Link className="goBack" to={"/"}>
+					&#129044;
+				</Link>
 				<Lang />
 			</header>
 			<div className="timeline">
 				<div className="timeline-input">
-                    <button onClick={ordenar} className="timeline-input__btn">
-                        O
-                    </button>
-                </div>
+					<button onClick={ordenar} className="timeline-input__btn">
+						O
+					</button>
+				</div>
 				<div className="timeline-box">
 					{ordenatedList.map((item, index) =>
 						index % 2 === 0 ? (
-							<div key={index} className="timeline-box-character paddingTop-left">
+							<div
+								key={index}
+								className="timeline-box-character paddingTop-left">
 								<div className="border">
 									<p className="timeline-box-character__age">
 										{item.age}
@@ -52,7 +56,9 @@ const Chronology = () => {
 								<img src={item.image} alt={item.name}></img>
 							</div>
 						) : (
-							<div key={index} className="timeline-box-character paddingTop-right right-border">
+							<div
+								key={index}
+								className="timeline-box-character paddingTop-right right-border">
 								<div className="border">
 									<p className="timeline-box-character__age">
 										{item.age}

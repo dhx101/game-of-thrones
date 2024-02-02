@@ -4,7 +4,6 @@ import axios from "axios";
 import Lang from "../../components/lang/Lang";
 import { Link } from "react-router-dom";
 
-
 const baseURL = "http://localhost:3000";
 
 function DetailHouses() {
@@ -26,7 +25,9 @@ function DetailHouses() {
 	return (
 		<>
 			<header className="header">
-				<Link to={"/houses"}> Atras </Link>
+				<Link className="goBack" to={"/houses"}>
+					&#129044;
+				</Link>
 				<Lang />
 			</header>
 			<div className="fondo1">

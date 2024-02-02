@@ -6,25 +6,17 @@
   padding: 50px;
   gap: 30px;
 }
-.fondo__nombre {
+.fondo__name {
   color: white;
   font-family: "GoT";
   text-align: center;
-  font-size: larger;
   margin-bottom: 20px;
-
-
 }
 .fondo__escudos {
-  width: 100%;
+  width: 200px;
 }
-
-.letras {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+.fondo__escudos img {
+  width: 100%;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -237,8 +229,23 @@ table {
   height: 320px;
 }
 
-.fondi {
-  background-color: beige;
+.nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  height: 10vh;
+  padding: 0px 10vw;
+}
+.nav__item {
+  color: white;
+  text-decoration: none;
+  font-family: "GoT";
+  font-weight: 400;
+  font-size: 25px;
 }
 
 .header {
@@ -354,9 +361,7 @@ table {
   margin: 30px 0px 47px;
   width: 100%;
   height: 36px;
-
   color: white;
-
 }
 
 .fondo1__titles1 {
@@ -366,7 +371,6 @@ table {
   justify-content: space-evenly;
   margin: 20px 20px 0px 20px;
   color: white;
-
 }
 
 h1.fondo1__titulos {
@@ -404,16 +408,18 @@ h1.fondo2name {
   padding: 50px;
   gap: 30px;
 }
-.fondo__nombre {
+.fondo__name {
   color: white;
   font-family: "GoT";
   text-align: center;
   margin-bottom: 20px;
 }
 .fondo__escudos {
+  width: 200px;
+}
+.fondo__escudos img {
   width: 100%;
 }
-
 
 @font-face {
   font-family: "GoT";
@@ -429,4 +435,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.goBack {
+  color: white;
+  text-decoration: none;
+  font-size: 50px;
 }/*# sourceMappingURL=index.css.map */
