@@ -25,8 +25,6 @@ const Chronology = () => {
 		console.log(ascending);
 	};
 
-	useEffect(() => {}, []);
-
 	return (
 		<>
 			<header className="header">
@@ -56,7 +54,7 @@ const Chronology = () => {
 											{item.name}
 										</p>
 									</div>
-									<Link to={`/characterDetails/${item.id}`}>
+									<Link className="" to={`/characterDetails/${item.id}`}>
 										<img src={item.image} alt={item.name}></img>
 									</Link>
 								</div>
@@ -72,7 +70,7 @@ const Chronology = () => {
 											{item.name}
 										</p>
 									</div>
-									<Link to={`/characterDetails/${item.id}`}>
+									<Link className="" to={`/characterDetails/${item.id}`}>
 										<img src={item.image} alt={item.name}></img>
 									</Link>
 								</div>
