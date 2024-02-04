@@ -1,3 +1,454 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities
+.fondo {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: space-between;
+  padding: 50px;
+  gap: 30px;
+}
+.fondo__name {
+  color: white;
+  font-family: "GoT";
+  text-align: center;
+  margin-bottom: 20px;
+}
+.fondo__escudos {
+  width: 200px;
+}
+.fondo__escudos img {
+  width: 100%;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.2 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  background-color: black;
+  background-image: url(https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/series-television/juego-de-tronos-quien-merece-trono-de-hierro/vota/135275835-1-esl-ES/vota.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inicio__title {
+  text-align: center;
+  font-size: 80px;
+  font-family: "GoT";
+  word-spacing: 25px;
+  line-height: 1.6;
+}
+
+.timeline {
+  padding: 25px 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+}
+.timeline-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+.timeline-input__btn {
+  color: white;
+  display: flex;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+  background-color: black;
+  cursor: pointer;
+}
+.timeline-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  width: 70%;
+}
+.timeline-box-character {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 25px;
+}
+.timeline-box-character__name {
+  font-weight: 700;
+}
+.timeline-box-character__age {
+  font-weight: 700;
+}
+.timeline-box-character img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.paddingTop-left {
+  padding-top: 50px;
+}
+.paddingTop-right {
+  padding-top: 150px;
+}
+
+.border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 10px;
+  width: 100%;
+  border-top: 3px solid white;
+}
+
+.right-border {
+  border-left: 3px solid white;
+}
+
+.character {
+  display: flex;
+  background-color: black;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.character-list {
+  margin: 20px 1px 20px 1px;
+  height: 320px;
+  width: 248px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+.character-list-a {
+  text-decoration: none;
+}
+.character-list-a__items {
+  margin-top: -30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.character-list-a__items:hover .character-list-a__items__nombrePersonaje {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.character-list-a__items__nombrePersonaje {
+  font-family: "GoT";
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  opacity: 0;
+  width: 100%;
+  padding: 15px 0;
+}
+.character-list-a__items__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: -45px;
+  width: 248px;
+  height: 320px;
+}
+
+.nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  height: 10vh;
+  padding: 0px 10vw;
+}
+.nav__item {
+  color: white;
+  text-decoration: none;
+  font-family: "GoT";
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 0 10vh;
+}
+.header-searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-searchbar label {
+  font-family: "GoT";
+  font-size: 1rem;
+  color: white;
+}
+.header-searchbar input {
+  height: 25px;
+}
+.header-lang {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 25px;
+  height: 60%;
+}
+.header-lang-flag {
+  height: 100%;
+  width: 100%;
+}
+.header-lang-home img {
+  height: 100%;
+}
+
+.selected {
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.fondo1 {
+  height: 80vh;
+  display: flex;
+  background-color: black;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.setImage {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fondo1name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "GoT";
+  margin-top: 20px;
+  margin: 30px 0px 47px;
+  width: 100%;
+  height: 36px;
+  color: white;
+}
+
+.fondo1__titles1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px 20px 0px 20px;
+  color: white;
+}
+.fondo1__titles1 p {
+  font-family: "GoT";
+}
+
+h1.fondo1__titulos {
+  font-family: "GoT";
+  margin-bottom: 30px;
+}
+
+.fondo1__pro1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+img.fondo1img1 {
+  width: 248px;
+  height: 320px;
+}
+
+h1.fondo2name {
+  font-size: 36px;
+}
+
+.p1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fondo {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: space-between;
+  padding: 50px;
+  gap: 30px;
+}
+.fondo__name {
+  color: white;
+  font-family: "GoT";
+  text-align: center;
+  margin-bottom: 20px;
+}
+.fondo__escudos {
+  width: 200px;
+}
+.fondo__escudos img {
+  width: 100%;
+}
+
+.description {
+  height: 80vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+.description-img {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.description-img__image {
+  width: 248px;
+  height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.description-name {
+  display: flex;
+  justify-content: center;
+}
+.description-name__character {
+  font-family: "GoT";
+  color: white;
+  font-size: 36px;
+  margin-top: 30px;
+}
+.description-titles {
+  margin: 20px 40px 0px 40px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.description-titles-unitari {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.description-titles-unitari__title {
+  font-size: 26px;
+  font-family: "GoT";
+}
+.description-titles-unitari__subtitle__text {
+  font-size: 16px;
+  margin-top: 15px;
+}
+.description-titles-unitari__subtitle__shield {
+  width: 160px;
+  height: 191px;
+}
+
+@font-face {
+  font-family: "GoT";
+  src: url(../public/assets/Game\ of\ Thrones.ttf);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.goBack {
+  color: white;
+  text-decoration: none;
+  font-size: 50px;
+}/*# sourceMappingURL=index.css.map */

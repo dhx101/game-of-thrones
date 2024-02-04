@@ -1,0 +1,34 @@
+@import "./pages/houses/Houses";
+@import "./reset";
+@import "./pages/inicio/inicio";
+@import "./pages/chronology/chronology";
+@import "./pages/characters/characters";
+@import "./components/nav/link";
+@import "./components//lang/lang.scss";
+@import "./pages/detailHouses/detailHouses";
+@import "./pages/houses/houses";
+@import "./pages/charactersDetails/characterDetails";
+
+
+@font-face {
+	font-family:  "GoT";
+	src: url(../public/assets/Game\ of\ Thrones.ttf);
+}
+
+ body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+ }
+
+ #root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+ }
+
+.goBack {
+	color: white;
+	text-decoration: none;
+	font-size: 50px;
+}

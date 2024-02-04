@@ -1,0 +1,51 @@
+.character {
+  display: flex;
+  background-color: black;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  &-list {
+    margin: 20px 1px 20px 1px;
+    height: 320px;
+    width: 248px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+
+    &-a {
+      text-decoration: none;
+      &__items {
+        margin-top: -30px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        &:hover .character-list-a__items__nombrePersonaje {
+          opacity: 1;
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+        &__nombrePersonaje {
+         
+            font-family: "GoT";
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            opacity: 0;
+            width: 100%;
+            padding: 15px 0;
+        
+        }
+
+        &__image {
+          object-fit: cover;
+          margin-bottom: -45px;
+          width: 248px;
+          height: 320px;
+        }
+      }
+    }
+  }
+}

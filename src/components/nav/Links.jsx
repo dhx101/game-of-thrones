@@ -1,19 +1,30 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+
 const Links = () => {
+	const { t } = useTranslation();
 	return (
-		<ul>
-			<li>
-				<Link to={"/characters"}>Personajes</Link>
-			</li>
-			<li>
-				<Link to={"/houses"}>Houses</Link>
-			</li>
-			<li>
-				<Link to={"/chronology"}>Chronology</Link>
-			</li>
-		</ul>
+		<div>
+			<ul className="nav">
+				<li>
+					<Link className="nav__item" to={"/characters"}>
+						{t("personajes")}
+					</Link>
+				</li>
+				<li>
+					<Link className="nav__item" to={"/houses"}>
+						{t("casas")}
+					</Link>
+				</li>
+				<li>
+					<Link className="nav__item" to={"/chronology"}>
+						{t("cronologia")}
+					</Link>
+				</li>
+			</ul>
+		</div>
 	);
 };
 

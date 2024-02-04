@@ -7,6 +7,7 @@ export const ApiContextProvider = ({ children }) => {
     const baseURL = "http://localhost:3000"
 	const [characters, setCharacters] = useState([]);
 	const [houses, setHouses] = useState([]);
+	
 
 	useEffect(() => {
 		const getCharacters = async () => {
@@ -32,8 +33,9 @@ export const ApiContextProvider = ({ children }) => {
 		getHouses();
 	  }, []);
 
+
 	return (
-		<ApiContext.Provider value={{ characters, houses }}>
+		<ApiContext.Provider value={{ characters, houses,  }}>
 			{children}
 		</ApiContext.Provider>
 	);

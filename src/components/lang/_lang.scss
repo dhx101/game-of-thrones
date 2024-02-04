@@ -1,0 +1,42 @@
+.header {
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
+	background-color: black;
+	padding: 0 10vh;
+	&-searchbar {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		label {
+			font-family: "GoT";
+			font-size: 1rem;
+			color: white;
+		}
+		input {
+			height: 25px;
+		}
+	}
+	&-lang {
+		display: flex;
+		justify-content: space-evenly;
+		gap: 25px;
+		height: 60%;
+
+		&-flag {
+			height: 100%;
+			width: 100%;
+		}
+		&-home {
+			img {
+				height: 100%;
+			}
+		}
+	}
+}
+.selected {
+	border-radius: 5px;
+	border: 1px solid white;
+}

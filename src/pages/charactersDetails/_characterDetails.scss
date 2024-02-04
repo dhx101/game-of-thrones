@@ -1,0 +1,54 @@
+.description {
+  height: 80vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  &-img {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    &__image {
+      width: 248px;
+      height: 320px;
+      object-fit: cover;
+    }
+  }
+  &-name {
+    display: flex;
+    justify-content: center;
+    &__character {
+      font-family: "GoT";
+      color: white;
+      font-size: 36px;
+      margin-top: 30px;
+    }
+  }
+  &-titles{
+    margin: 20px 40px 0px 40px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-unitari{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    &__title{
+      font-size: 26px;
+      font-family: 'GoT';
+    }
+    &__subtitle{
+      &__text{
+        font-size: 16px;
+        margin-top: 15px;
+      }
+      &__shield{
+        width: 160px;
+        height: 191px;
+      }
+    }
+  }
+  }
+}

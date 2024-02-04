@@ -1,30 +1,62 @@
-import React, { useContext } from "react";
-import { ApiContext } from "../../context/Context";
+// import React, { useContext } from "react";
+// import { ApiContext } from "../../context/Context";
+import { Link } from "react-router-dom";
+import SearchBar from "../../components/searchbar/SearchBar";
+import Lang from "../../components/lang/Lang";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
+
 
 const Characters = () => {
-  const { characters } = useContext(ApiContext);
-  console.log(characters);
+  // const { characters } = useContext(ApiContext);
+  const baseURL = "http://localhost:3000";
+	const [characters, setCharacters] = useState([]);
 
+	const getCharacters = async (name) => {
+		try {
+			if (name) {
+				const charactersApi = await axios.get(
+					`${baseURL}/characters?name=${name}`
+				);
+				setCharacters(charactersApi.data);
+			} else {
+				const charactersApi = await axios.get(`${baseURL}/characters`);
+				setCharacters(charactersApi.data); // Extraer los datos de la respuesta
+			}
+		} catch (error) {
+			console.error("Error fetching characters:", error);
+		}
+	};
+	useEffect(() => {
+		getCharacters();
+	}, []);
+
+	const urlJson = (name) => {
+		getCharacters(name);
+	};
   return (
     <>
-      <div className="">
-        {characters.map((person, i) => (
-          <div key={i} className="">
-            <ul>
-              <li className="">Number id: {person.id}</li>
-              <li className="">Name: {person.name}</li>
-              <li className="">House: {person.house}</li>
-              <li className="">Parents: {person.parents}</li>
-              <li className="">Siblings: {person.siblings}</li>
-              <li className="">Titles: {person.titles}</li>
-              <li className="">Alliances: {person.alliances}</li>
-              <li className="">Episodes: {person.episodes}</li>
-              <li className="">Age: {person.age}</li>
-              <li><img src={person.image} alt="Character Image" /></li>
-            </ul>
+    <header className="header">
+        <SearchBar urlJson={urlJson} />
+        <Lang />
+      </header>
+      <SimpleBar forceVisible="y" style={{ height: "80vh" }}>
+      <div className="character">
+        {characters.map((Character) => (
+          <div className="character-list" key={Character.id}> 
+            <Link className="character-list-a" to={`/characterDetails/${Character.id}`}>
+                <div className="character-list-a__items">
+                <img className="character-list-a__items__image" src={Character.image} alt={Character.name} />
+                <h1 className="character-list-a__items__nombrePersonaje">{Character.name}</h1>
+                </div>
+            </Link>
           </div>
         ))}
       </div>
+      </SimpleBar>
+      
     </>
   );
 };
